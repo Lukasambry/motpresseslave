@@ -1,18 +1,21 @@
 import type { CollectionConfig } from 'payload'
 
-import { authenticated } from '../../access/authenticated'
-import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
-import { Archive } from '../../blocks/ArchiveBlock/config'
-import { CallToAction } from '../../blocks/CallToAction/config'
-import { Content } from '../../blocks/Content/config'
-import { FormBlock } from '../../blocks/Form/config'
-import { MediaBlock } from '../../blocks/MediaBlock/config'
+import { authenticated } from '@/access/authenticated'
+import { authenticatedOrPublished } from '@/access/authenticatedOrPublished'
+import { Archive } from '@/blocks/ArchiveBlock/config'
+import { CallToAction } from '@/blocks/CallToAction/config'
+import { Content } from '@/blocks/Content/config'
+import { FormBlock } from '@/blocks/Form/config'
+import { MediaBlock } from '@/blocks/MediaBlock/config'
+import { Accordion } from '@/blocks/Accordion/config'
+import { Alert } from '@/blocks/Alert/config'
+import { AlertDialog } from '@/blocks/AlertDialog/config'
 import { hero } from '@/heros/config'
 import { slugField } from '@/fields/slug'
-import { populatePublishedAt } from '../../hooks/populatePublishedAt'
-import { generatePreviewPath } from '../../utilities/generatePreviewPath'
-import { revalidatePage } from './hooks/revalidatePage'
+import { populatePublishedAt } from '@/hooks/populatePublishedAt'
 
+import { generatePreviewPath } from '@/utilities/generatePreviewPath'
+import { revalidatePage } from './hooks/revalidatePage'
 import {
   MetaDescriptionField,
   MetaImageField,
@@ -77,7 +80,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
+              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog],
               required: true,
             },
           ],
