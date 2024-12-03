@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cd2e722-16a7-42e3-8d0d-561d44b4f50e" name="Changes" comment="" />
+    <list default="true" id="7cd2e722-16a7-42e3-8d0d-561d44b4f50e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/blocks/Accordion/Component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/blocks/Accordion/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/blocks/Alert/Component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/blocks/Alert/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Accordion/Accordion.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(payload)/admin/importMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(payload)/admin/importMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/MediaBlock/Component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/MediaBlock/Component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/RelatedPosts/Component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/RelatedPosts/Component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/RenderBlocks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/RenderBlocks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collections/Pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/Pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payload-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/payload-types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payload.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/payload.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2persKsnL7P5DeJ89lu0Il2Evcy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,6 +52,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/lukas/Documents/Wizards/motpresseslave/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/home/lukas/Documents/Wizards/motpresseslave/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -59,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733137587380</updated>
       <workItem from="1733137588480" duration="666000" />
+      <workItem from="1733138396844" duration="23489000" />
     </task>
     <servers />
   </component>

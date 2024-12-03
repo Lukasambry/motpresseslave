@@ -8,6 +8,9 @@ import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { ContentBlock } from '@/blocks/Content/Component'
 import { FormBlock } from '@/blocks/Form/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component'
+import { AccordionBlock } from '@/blocks/Accordion/Component'
+import { AlertBlock } from '@/blocks/Alert/Component'
+import { AlertDialogBlock } from '@/blocks/AlertDialog/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -15,6 +18,9 @@ const blockComponents = {
   cta: CallToActionBlock,
   formBlock: FormBlock,
   mediaBlock: MediaBlock,
+  accordionBlock: AccordionBlock,
+  alertBlock: AlertBlock,
+  alertDialogBlock: AlertDialogBlock,
 }
 
 export const RenderBlocks: React.FC<{
