@@ -128,6 +128,9 @@ export interface Page {
     | AccordionBlock
     | AlertBlock
     | AlertDialogBlock
+    | AvatarBlock
+    | CarouselBlock
+    | ChartBlock
   )[];
   meta?: {
     title?: string | null;
@@ -677,6 +680,70 @@ export interface AlertDialogBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "AvatarBlock".
+ */
+export interface AvatarBlock {
+  src: string;
+  alt: string;
+  fallback: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'avatarBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CarouselBlock".
+ */
+export interface CarouselBlock {
+  items?:
+    | {
+        src?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  isVertical?: boolean | null;
+  alignStart?: boolean | null;
+  loop?: boolean | null;
+  autoPlay?: boolean | null;
+  autoScroll?: boolean | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'carouselBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ChartBlock".
+ */
+export interface ChartBlock {
+  chartConfig?:
+    | {
+        color: string;
+        id?: string | null;
+      }[]
+    | null;
+  chartData?:
+    | {
+        fields?:
+          | {
+              fieldName: string;
+              value: number;
+              label: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  showTooltip?: boolean | null;
+  showLegend?: boolean | null;
+  xAxisLegend?: string | null;
+  yAxisLegend?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'chartBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -961,6 +1028,61 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               alertDialogTitle?: T;
               alertDialogDescription?: T;
+              id?: T;
+              blockName?: T;
+            };
+        avatarBlock?:
+          | T
+          | {
+              src?: T;
+              alt?: T;
+              fallback?: T;
+              id?: T;
+              blockName?: T;
+            };
+        carouselBlock?:
+          | T
+          | {
+              items?:
+                | T
+                | {
+                    src?: T;
+                    id?: T;
+                  };
+              isVertical?: T;
+              alignStart?: T;
+              loop?: T;
+              autoPlay?: T;
+              autoScroll?: T;
+              id?: T;
+              blockName?: T;
+            };
+        chartBlock?:
+          | T
+          | {
+              chartConfig?:
+                | T
+                | {
+                    color?: T;
+                    id?: T;
+                  };
+              chartData?:
+                | T
+                | {
+                    fields?:
+                      | T
+                      | {
+                          fieldName?: T;
+                          value?: T;
+                          label?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              showTooltip?: T;
+              showLegend?: T;
+              xAxisLegend?: T;
+              yAxisLegend?: T;
               id?: T;
               blockName?: T;
             };
