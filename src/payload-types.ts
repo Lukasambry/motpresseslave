@@ -132,6 +132,7 @@ export interface Page {
     | CarouselBlock
     | ChartBlock
     | ContextMenuBlock
+    | DrawerBlock
   )[];
   meta?: {
     title?: string | null;
@@ -775,6 +776,34 @@ export interface ContextMenuBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "DrawerBlock".
+ */
+export interface DrawerBlock {
+  title?: string | null;
+  description?: string | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  submitButtonText?: string | null;
+  cancelButtonText?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'drawerBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -1141,6 +1170,17 @@ export interface PagesSelect<T extends boolean = true> {
                         };
                     id?: T;
                   };
+              id?: T;
+              blockName?: T;
+            };
+        drawerBlock?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              content?: T;
+              submitButtonText?: T;
+              cancelButtonText?: T;
               id?: T;
               blockName?: T;
             };

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd2e722-16a7-42e3-8d0d-561d44b4f50e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/blocks/ContextMenu/Component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/ContextMenu/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/blocks/Drawer/Component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/blocks/Drawer/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
