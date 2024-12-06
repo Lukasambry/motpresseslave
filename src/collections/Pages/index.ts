@@ -13,6 +13,7 @@ import { AlertDialog } from '@/blocks/AlertDialog/config'
 import { Avatar } from '@/blocks/Avatar/config'
 import { Carousel } from '@/blocks/Carousel/config'
 import { Chart } from '@/blocks/Chart/config'
+import { ContextMenu } from '@/blocks/ContextMenu/config'
 import { hero } from '@/heros/config'
 import { slugField } from '@/fields/slug'
 
@@ -83,7 +84,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog, Avatar, Carousel, Chart],
+              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog, Avatar, Carousel, Chart, ContextMenu],
               required: true,
             },
           ],

@@ -131,6 +131,7 @@ export interface Page {
     | AvatarBlock
     | CarouselBlock
     | ChartBlock
+    | ContextMenuBlock
   )[];
   meta?: {
     title?: string | null;
@@ -744,6 +745,36 @@ export interface ChartBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContextMenuBlock".
+ */
+export interface ContextMenuBlock {
+  items?:
+    | {
+        label?: string | null;
+        shortcut?: string | null;
+        disabled?: boolean | null;
+        inset?: boolean | null;
+        type?: ('item' | 'checkbox' | 'radio' | 'submenu' | 'separator') | null;
+        checked?: boolean | null;
+        value?: string | null;
+        subItems?:
+          | {
+              label?: string | null;
+              shortcut?: string | null;
+              disabled?: boolean | null;
+              inset?: boolean | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'contextMenuBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -1083,6 +1114,33 @@ export interface PagesSelect<T extends boolean = true> {
               showLegend?: T;
               xAxisLegend?: T;
               yAxisLegend?: T;
+              id?: T;
+              blockName?: T;
+            };
+        contextMenuBlock?:
+          | T
+          | {
+              items?:
+                | T
+                | {
+                    label?: T;
+                    shortcut?: T;
+                    disabled?: T;
+                    inset?: T;
+                    type?: T;
+                    checked?: T;
+                    value?: T;
+                    subItems?:
+                      | T
+                      | {
+                          label?: T;
+                          shortcut?: T;
+                          disabled?: T;
+                          inset?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };

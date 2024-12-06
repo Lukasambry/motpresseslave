@@ -14,6 +14,7 @@ import { AlertDialogBlock } from '@/blocks/AlertDialog/Component'
 import { AvatarBlock } from '@/blocks/Avatar/Component'
 import { CarouselBlock } from '@/blocks/Carousel/Component'
 import { ChartBlock } from '@/blocks/Chart/Component'
+import { ContextMenuBlock } from '@/blocks/ContextMenu/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -27,6 +28,7 @@ const blockComponents = {
   avatarBlock: AvatarBlock,
   carouselBlock: CarouselBlock,
   chartBlock: ChartBlock,
+  contextMenuBlock: ContextMenuBlock,
 }
 
 export const RenderBlocks: React.FC<{
