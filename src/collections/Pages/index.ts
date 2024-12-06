@@ -28,6 +28,7 @@ import {
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
 import { getServerSideURL } from '@/utilities/getURL'
+import { Drawer } from '@/blocks/Drawer/config'
 
 export const Pages: CollectionConfig<'pages'> = {
   slug: 'pages',
@@ -84,7 +85,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog, Avatar, Carousel, Chart, ContextMenu],
+              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog, Avatar, Carousel, Chart, ContextMenu, Drawer],
               required: true,
             },
           ],
