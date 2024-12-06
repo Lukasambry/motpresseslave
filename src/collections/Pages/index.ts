@@ -10,10 +10,13 @@ import { MediaBlock } from '@/blocks/MediaBlock/config'
 import { Accordion } from '@/blocks/Accordion/config'
 import { Alert } from '@/blocks/Alert/config'
 import { AlertDialog } from '@/blocks/AlertDialog/config'
+import { Avatar } from '@/blocks/Avatar/config'
+import { Carousel } from '@/blocks/Carousel/config'
+import { Chart } from '@/blocks/Chart/config'
 import { hero } from '@/heros/config'
 import { slugField } from '@/fields/slug'
-import { populatePublishedAt } from '@/hooks/populatePublishedAt'
 
+import { populatePublishedAt } from '@/hooks/populatePublishedAt'
 import { generatePreviewPath } from '@/utilities/generatePreviewPath'
 import { revalidatePage } from './hooks/revalidatePage'
 import {
@@ -80,7 +83,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog],
+              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog, Avatar, Carousel, Chart],
               required: true,
             },
           ],

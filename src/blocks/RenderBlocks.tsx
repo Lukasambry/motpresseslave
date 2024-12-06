@@ -11,6 +11,9 @@ import { MediaBlock } from '@/blocks/MediaBlock/Component'
 import { AccordionBlock } from '@/blocks/Accordion/Component'
 import { AlertBlock } from '@/blocks/Alert/Component'
 import { AlertDialogBlock } from '@/blocks/AlertDialog/Component'
+import { AvatarBlock } from '@/blocks/Avatar/Component'
+import { CarouselBlock } from '@/blocks/Carousel/Component'
+import { ChartBlock } from '@/blocks/Chart/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -21,6 +24,9 @@ const blockComponents = {
   accordionBlock: AccordionBlock,
   alertBlock: AlertBlock,
   alertDialogBlock: AlertDialogBlock,
+  avatarBlock: AvatarBlock,
+  carouselBlock: CarouselBlock,
+  chartBlock: ChartBlock,
 }
 
 export const RenderBlocks: React.FC<{
