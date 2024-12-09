@@ -133,6 +133,7 @@ export interface Page {
     | ChartBlock
     | ContextMenuBlock
     | DrawerBlock
+    | ButtonBlock
   )[];
   meta?: {
     title?: string | null;
@@ -676,9 +677,26 @@ export interface AlertBlock {
 export interface AlertDialogBlock {
   alertDialogTitle: string;
   alertDialogDescription?: string | null;
+  buttons?: ButtonBlock[] | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'alertDialogBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ButtonBlock".
+ */
+export interface ButtonBlock {
+  text: string;
+  variant: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+  link?: string | null;
+  tooltip?: boolean | null;
+  badge?: boolean | null;
+  tooltipText?: string | null;
+  badgeVariant?: ('default' | 'destructive' | 'outline' | 'secondary') | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'buttonBlock';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1087,6 +1105,23 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               alertDialogTitle?: T;
               alertDialogDescription?: T;
+              buttons?:
+                | T
+                | {
+                    buttonBlock?:
+                      | T
+                      | {
+                          text?: T;
+                          variant?: T;
+                          link?: T;
+                          tooltip?: T;
+                          badge?: T;
+                          tooltipText?: T;
+                          badgeVariant?: T;
+                          id?: T;
+                          blockName?: T;
+                        };
+                  };
               id?: T;
               blockName?: T;
             };
@@ -1179,6 +1214,19 @@ export interface PagesSelect<T extends boolean = true> {
               content?: T;
               submitButtonText?: T;
               cancelButtonText?: T;
+              id?: T;
+              blockName?: T;
+            };
+        buttonBlock?:
+          | T
+          | {
+              text?: T;
+              variant?: T;
+              link?: T;
+              tooltip?: T;
+              badge?: T;
+              tooltipText?: T;
+              badgeVariant?: T;
               id?: T;
               blockName?: T;
             };

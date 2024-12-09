@@ -1,7 +1,5 @@
 import {
   AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
@@ -9,22 +7,26 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import { Button } from "@/components/ui/button"
-
+import { ButtonBlock } from '@/blocks/Button/Component'
 import React from 'react';
+
+type ButtonConfig = {
+  text: string;
+  variant: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+};
 
 type Props = {
   className?: string;
   alertDialogTitle: string;
   alertDialogDescription: string;
+  buttons: ButtonConfig[];
 };
 
-
-export const AlertDialogBlock: React.FC<Props> = ({ className, alertDialogTitle, alertDialogDescription }) => {
+export const AlertDialogBlock: React.FC<Props> = ({ className, alertDialogTitle, alertDialogDescription, buttons }) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="outline">Show Dialog</Button>
+        <ButtonBlock text="Show Dialog" variant="outline" />
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
@@ -34,8 +36,9 @@ export const AlertDialogBlock: React.FC<Props> = ({ className, alertDialogTitle,
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
+          {buttons.map((button, index) => (
+            <ButtonBlock key={index} text={button.text} variant={button.variant} />
+          ))}
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
