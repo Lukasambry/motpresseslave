@@ -3,11 +3,8 @@ import {
   ContextMenuCheckboxItem,
   ContextMenuContent,
   ContextMenuItem,
-  ContextMenuLabel,
-  ContextMenuRadioGroup,
   ContextMenuRadioItem,
   ContextMenuSeparator,
-  ContextMenuShortcut,
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
@@ -17,7 +14,6 @@ import React from "react"
 
 type MenuItem = {
   label: string
-  shortcut?: string
   disabled?: boolean
   inset?: boolean
   type: 'item' | 'checkbox' | 'radio' | 'submenu' | 'separator'
@@ -37,21 +33,18 @@ export const ContextMenuBlock: React.FC<Props> = ({ items }) => {
         return (
           <ContextMenuItem key={index} inset={item.inset} disabled={item.disabled}>
             {item.label}
-            {item.shortcut && <ContextMenuShortcut>{item.shortcut}</ContextMenuShortcut>}
           </ContextMenuItem>
         )
       case 'checkbox':
         return (
           <ContextMenuCheckboxItem key={index} checked={item.checked} disabled={item.disabled}>
             {item.label}
-            {item.shortcut && <ContextMenuShortcut>{item.shortcut}</ContextMenuShortcut>}
           </ContextMenuCheckboxItem>
         )
       case 'radio':
         return (
           <ContextMenuRadioItem key={index} value={item.value || ''}  disabled={item.disabled}>
             {item.label}
-            {item.shortcut && <ContextMenuShortcut>{item.shortcut}</ContextMenuShortcut>}
           </ContextMenuRadioItem>
         )
       case 'submenu':

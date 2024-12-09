@@ -14,11 +14,6 @@ export const ContextMenu: Block = {
           label: 'Label',
         },
         {
-          name: 'shortcut',
-          type: 'text',
-          label: 'Shortcut',
-        },
-        {
           name: 'disabled',
           type: 'checkbox',
           label: 'Disabled',
@@ -64,11 +59,6 @@ export const ContextMenu: Block = {
               name: 'label',
               type: 'text',
               label: 'Label',
-            },
-            {
-              name: 'shortcut',
-              type: 'text',
-              label: 'Shortcut',
             },
             {
               name: 'disabled',
