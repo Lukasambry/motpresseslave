@@ -70,6 +70,18 @@ export const ContextMenu: Block = {
               type: 'checkbox',
               label: 'Inset',
             },
+            {
+              name: 'type',
+              type: 'select',
+              options: [
+                { label: 'Item', value: 'item' },
+                { label: 'Checkbox', value: 'checkbox' },
+                { label: 'Radio', value: 'radio' },
+                { label: 'Submenu', value: 'submenu' },
+                { label: 'Separator', value: 'separator' },
+              ],
+              label: 'Type',
+            },
           ],
           admin: {
             condition: (data, siblingData) => siblingData.type === 'submenu',

@@ -762,6 +762,7 @@ export interface ContextMenuBlock {
               label?: string | null;
               disabled?: boolean | null;
               inset?: boolean | null;
+              type?: ('item' | 'checkbox' | 'radio' | 'submenu' | 'separator') | null;
               id?: string | null;
             }[]
           | null;
@@ -1162,6 +1163,7 @@ export interface PagesSelect<T extends boolean = true> {
                           label?: T;
                           disabled?: T;
                           inset?: T;
+                          type?: T;
                           id?: T;
                         };
                     id?: T;
