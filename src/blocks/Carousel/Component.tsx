@@ -8,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import Autoplay, { AutoplayType } from 'embla-carousel-autoplay'
 import AutoScroll, { AutoScrollType } from 'embla-carousel-auto-scroll'
 import { Media } from '@/components/Media'
-import { bgRed } from 'colorette'
 
 type Item = {
   src: string
