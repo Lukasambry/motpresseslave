@@ -16,6 +16,7 @@ import { CarouselBlock } from '@/blocks/Carousel/Component'
 import { ChartBlock } from '@/blocks/Chart/Component'
 import { ContextMenuBlock } from '@/blocks/ContextMenu/Component'
 import { DrawerBlock } from '@/blocks/Drawer/Component'
+import { ButtonBlock } from '@/blocks/Button/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -31,6 +32,7 @@ const blockComponents = {
   chartBlock: ChartBlock,
   contextMenuBlock: ContextMenuBlock,
   drawerBlock: DrawerBlock,
+  buttonBlock: ButtonBlock
 }
 
 export const RenderBlocks: React.FC<{

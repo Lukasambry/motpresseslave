@@ -14,6 +14,8 @@ import { Avatar } from '@/blocks/Avatar/config'
 import { Carousel } from '@/blocks/Carousel/config'
 import { Chart } from '@/blocks/Chart/config'
 import { ContextMenu } from '@/blocks/ContextMenu/config'
+import { Drawer } from '@/blocks/Drawer/config'
+import { Button } from '@/blocks/Button/config'
 import { hero } from '@/heros/config'
 import { slugField } from '@/fields/slug'
 
@@ -28,7 +30,6 @@ import {
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
 import { getServerSideURL } from '@/utilities/getURL'
-import { Drawer } from '@/blocks/Drawer/config'
 
 export const Pages: CollectionConfig<'pages'> = {
   slug: 'pages',
@@ -85,7 +86,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog, Avatar, Carousel, Chart, ContextMenu, Drawer],
+              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Accordion, Alert, AlertDialog, Avatar, Carousel, Chart, ContextMenu, Drawer, Button],
               required: true,
             },
           ],

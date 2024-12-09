@@ -1,4 +1,5 @@
 import { Block } from 'payload'
+import { Button } from '@/blocks/Button/config'
 
 export const AlertDialog: Block = {
   slug: 'alertDialogBlock',
@@ -12,6 +13,11 @@ export const AlertDialog: Block = {
     {
       name: 'alertDialogDescription',
       type: 'text',
+    },
+    {
+      name: 'buttons',
+      type: 'blocks',
+      blocks: [Button],
     },
   ],
 }
